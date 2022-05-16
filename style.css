@@ -71,7 +71,7 @@ label:hover {
       border: 0.5em solid blueviolet;
       background-color: transparent;
 }
-.bottomSlider {
+.navigation {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -126,4 +126,21 @@ h2 {
 }
 #btn4:checked~.bottomSlider .textOverflow .text {
       transform: translate(-300%);
+}
+@media (max-width: 600px) {
+      .wrapper {
+      width: 90%;
+      }
+      .navigation {
+            flex-direction: column-reverse;
+      }
+      .subscription {
+            width: 100%;
+            min-width: auto;
+      }
+      .switch {
+            width: 100%;
+            margin: 0 auto;
+            justify-content: center;
+      }
 }

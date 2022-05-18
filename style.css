@@ -1,0 +1,146 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+}
+body {
+      background-color: rgb(58, 58, 58);
+}
+.wrapper {
+      position: relative;
+      width: 80%;
+      margin: 1% auto;
+}
+.wrapper input {
+      display: none;
+}
+.switch {
+      width: 30%;
+      align-items: center;
+      display: flex;
+      justify-content: flex-end;
+}
+.switch label {
+      display: inline-block;
+      width: 2em;
+      height: 2em;
+      cursor: pointer;
+      margin: 0 10px;
+      border-radius: 50%;
+      background-color: blueviolet;
+}
+label:hover {
+      background-color: beige;
+}
+
+.innerBTN {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      cursor: pointer;
+      margin: 0px 3%;
+      border-radius: 50%;
+}
+.pictures {
+      overflow: hidden;
+      width: 100%;
+}
+.slides {
+      width: 400%;
+      transition: all 0.5s;
+}
+.slides img {
+      width: 25%;
+      height: auto;
+      float: left;
+}
+
+#btn1:checked~.bottomSlider .switch label[for="btn1"] {
+      border: 0.5em solid blueviolet;
+      background-color: transparent;
+}
+#btn2:checked~.bottomSlider .switch label[for="btn2"] {
+      border: 0.5em solid blueviolet;
+      background-color: transparent;
+}
+#btn3:checked~.bottomSlider .switch label[for="btn3"] {
+      border: 0.5em solid blueviolet;
+      background-color: transparent;
+}
+#btn4:checked~.bottomSlider  .switch label[for="btn4"] {
+      border: 0.5em solid blueviolet;
+      background-color: transparent;
+}
+.navigation {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      height: 4rem;
+      flex-direction: row;
+      color: white;
+      align-items: center;
+}
+.subscription {
+      width: 70%;
+      height: 100%;
+}
+.textOverflow {
+      width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.text {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+}
+h2 {
+      flex: 0 0 auto;
+      width: 100%;
+      font-size: 3em;
+}
+
+#btn1:checked~.pictures .slides {
+      transform: translate(0);
+}
+#btn2:checked~.pictures .slides {
+      transform: translate(-25%);
+}
+#btn3:checked~.pictures .slides {
+      transform: translate(-50%);
+}
+#btn4:checked~.pictures .slides {
+      transform: translate(-75%);
+}
+
+
+#btn1:checked~.bottomSlider .textOverflow .text {
+      transform: translate(0);
+}
+#btn2:checked~.bottomSlider .textOverflow .text {
+      transform: translate(-100%);
+}
+#btn3:checked~.bottomSlider .textOverflow .text {
+      transform: translate(-200%);
+}
+#btn4:checked~.bottomSlider .textOverflow .text {
+      transform: translate(-300%);
+}
+@media (max-width: 600px) {
+      .wrapper {
+      width: 90%;
+      }
+      .navigation {
+            flex-direction: column-reverse;
+      }
+      .subscription {
+            width: 100%;
+            min-width: auto;
+      }
+      .switch {
+            width: 100%;
+            margin: 0 auto;
+            justify-content: center;
+      }
+}
